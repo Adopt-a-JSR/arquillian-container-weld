@@ -190,6 +190,14 @@ public class MockEjbDescriptor<T> implements EjbDescriptor<T>
       builder.append("; BeanClass: " + getBeanClass() + "; Local Business Interfaces: " + getLocalBusinessInterfaces());
       return builder.toString(); 
    }
+
+	@Override
+	public boolean isPassivationCapable() {
+		// TODO add EJB 3.2 passivationCapable check
+		return isStateful();
+	}
+  
+   
    
 //   @Override
 //   public boolean equals(Object other)

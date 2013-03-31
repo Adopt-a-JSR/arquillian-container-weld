@@ -70,6 +70,7 @@ public class WeldEmbeddedIntegrationSessionScopeTestCase
             "Verify that the Bean has been injected",
             chicken);
       
+      chicken.setAge(10);
       Assert.assertEquals(new Integer(10), chicken.getAge());
    }
 }
